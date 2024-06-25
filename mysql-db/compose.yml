@@ -1,0 +1,13 @@
+services:
+  mysql-db:
+    container_name: mysql
+    image: mysql:8.0
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=<Enter the root user password>
+      - MYSQL_DATABASE=<Enter the database name you want to create>
+volumes:
+  db:
